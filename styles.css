@@ -91,13 +91,20 @@ nav.menu a:hover {
 .vishka-box img {
     width: 100%;
     height: auto;
+    max-height: 65%;
 }
+
 .vishka-info {
     padding: 20px;
+    padding-bottom: 0;
 }
 .vishka-info h2 {
     margin-top: 0;
     color: #0073e6;
+}
+
+.vishka-info p {
+    line-height: 1.6;
 }
 
 .contact-section {
