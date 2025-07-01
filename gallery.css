@@ -10,12 +10,49 @@ body {
     margin: 2rem auto;
 }
 
-.main-image {
+.slider {
+    position: relative;
+    max-width: fit-content;
+    height: 720px; /* фиксирана височина */
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slides img {
     width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.slider .prev {
+    left: 10px;
+}
+
+.slider .next {
+    right: 10px;
 }
 
 .gallery {
@@ -32,6 +69,7 @@ body {
     border-radius: 10px;
     transition: transform 0.3s ease;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .gallery img:hover {

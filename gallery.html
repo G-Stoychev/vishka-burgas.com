@@ -20,23 +20,13 @@
             <a href="index.html#contacts">Контакти</a>
         </nav>
         <div class="container">
-            <!-- Голяма централна снимка -->
-            <img
-                class="main-image"
-                src="images/Vishki/IMG-015aae034207c31cd63b06042e40ba13-V.jpg"
-                alt="Основна снимка"
-            />
-
-            <!-- Галерия от снимки -->
-            <div class="gallery">
-                <img src="images/gallery/photo1.jpg" alt="Снимка 1" />
-                <img src="images/gallery/photo2.jpg" alt="Снимка 2" />
-                <img src="images/gallery/photo3.jpg" alt="Снимка 3" />
-                <img src="images/gallery/photo4.jpg" alt="Снимка 4" />
-                <img src="images/gallery/photo5.jpg" alt="Снимка 5" />
-                <img src="images/gallery/photo6.jpg" alt="Снимка 6" />
-                <!-- Добави още снимки по същия начин -->
+            <div class="slider">
+                <button class="prev">&#10094;</button>
+                <div class="slides"></div>
+                <button class="next">&#10095;</button>
             </div>
+
+            <div class="gallery"></div>
         </div>
         <section id="contacts" class="contact-section">
             <h2>Контакти</h2>
@@ -44,5 +34,6 @@
             <p>Адрес: ул.Транспортна , Бургас</p>
             <p>Работно време: Понеделник-Неделя 9:00 - 18:00</p>
         </section>
+        <script type="module" src="gallery.js"></script>
     </body>
 </html>
