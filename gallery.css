@@ -55,6 +55,14 @@ body {
     right: 10px;
 }
 
+.slider button:hover {
+    background: rgba(0, 0, 0, 0.863);
+}
+
+.slider button:active {
+    scale: 1.1;
+}
+
 .gallery {
     margin-top: 2rem;
     display: grid;

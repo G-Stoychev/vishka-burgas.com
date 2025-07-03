@@ -14,8 +14,9 @@ vishkaImg.forEach((v) => {
 if (gallery) gallery.innerHTML = galleryHTML;
 if (slides) slides.innerHTML = sliderHTML;
 
-// Слайд логика (ако искаш)
 let index = 0;
+let sliderInterval;
+
 const updateSlider = () => {
     if (!slides) return;
     slides.style.transform = `translateX(-${index * 100}%)`;
@@ -31,14 +32,23 @@ document.querySelector(".next")?.addEventListener("click", () => {
     updateSlider();
 });
 
-setInterval(() => {
-    index = (index + 1) % vishkaImg.length;
-    updateSlider();
-}, 5000);
+const startInterval = () => {
+    sliderInterval = setInterval(() => {
+        index = (index + 1) % vishkaImg.length;
+        updateSlider();
+    }, 5000);
+};
+function resetSlider() {
+    clearInterval(sliderInterval);
+    startInterval();
+}
 
 document.querySelectorAll("#gImg").forEach((img, i) => {
     img.addEventListener("click", () => {
         index = i;
         updateSlider();
+        resetSlider();
     });
 });
+
+startInterval();
