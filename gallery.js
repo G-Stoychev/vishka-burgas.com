@@ -1,5 +1,9 @@
 import vishkaImg from "./imgData.js";
 
+document.getElementById("hamburger").addEventListener("click", function () {
+    document.getElementById("menuLinks").classList.toggle("active");
+});
+
 const gallery = document.querySelector(".gallery");
 const slides = document.querySelector(".slides");
 

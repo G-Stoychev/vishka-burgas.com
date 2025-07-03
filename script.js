@@ -20,3 +20,7 @@ function prevSlide() {
 setInterval(nextSlide, 5000);
 
 document.addEventListener("DOMContentLoaded", () => showSlide(currentSlide));
+
+document.getElementById("hamburger").addEventListener("click", function () {
+    document.getElementById("menuLinks").classList.toggle("active");
+});
