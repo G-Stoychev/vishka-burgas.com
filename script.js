@@ -12,11 +12,6 @@ function nextSlide() {
     showSlide(currentSlide);
 }
 
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-}
-
 setInterval(nextSlide, 5000);
 
 document.addEventListener("DOMContentLoaded", () => showSlide(currentSlide));

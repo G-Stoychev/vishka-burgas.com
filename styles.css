@@ -75,20 +75,6 @@ nav.menu a:hover {
 .slide.active {
     opacity: 1;
 }
-.slider-nav {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.slider-nav button {
-    background: rgba(255, 255, 255, 0.7);
-    border: none;
-    padding: 10px;
-    margin: 0 5px;
-    font-size: 24px;
-    cursor: pointer;
-}
 
 .vishki-section {
     display: flex;
