@@ -52,7 +52,12 @@ document.querySelectorAll("#gImg").forEach((img, i) => {
         index = i;
         updateSlider();
         resetSlider();
+        document.querySelector(".slider").showModal();
     });
 });
 
 startInterval();
+
+document.querySelector(".close").addEventListener("click", () => {
+    document.querySelector(".slider").close("slider");
+});

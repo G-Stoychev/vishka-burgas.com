@@ -10,14 +10,27 @@ body {
     margin: 2rem auto;
 }
 
+.container h2 {
+    color: #0073e6;
+    text-align: center;
+}
+
 .slider {
-    position: relative;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     max-width: 1080px;
     height: 720px;
-    margin: 40px auto;
     overflow: hidden;
     border-radius: 10px;
+    border: none;
+    padding: 0;
+}
+
+.slider::backdrop {
+    background-color: #d7e0e7;
 }
 
 .slides {
@@ -35,7 +48,7 @@ body {
     flex-shrink: 0;
 }
 
-.slider button {
+.slider .m-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -47,6 +60,21 @@ body {
     font-size: 24px;
     z-index: 10;
     border-radius: 5px;
+}
+.slider .close {
+    position: absolute;
+    top: 5%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    border-radius: 5px;
+    background-color: rgb(211, 9, 9);
 }
 
 .slider .prev {
