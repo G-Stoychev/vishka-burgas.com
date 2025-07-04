@@ -11,7 +11,7 @@ let galleryHTML = "";
 let sliderHTML = "";
 
 vishkaImg.forEach((v) => {
-    galleryHTML += `<img id="gImg" src="${v.img}" alt="${v.alt}"  title"${v.name}/>`;
+    galleryHTML += `<img id="gImg" src="${v.img}" alt="${v.alt}"  title"${v.name} loading="lazy"/>`;
     sliderHTML += `<img src="${v.img}" alt="${v.alt}"  title"${v.name}" />`;
 });
 
