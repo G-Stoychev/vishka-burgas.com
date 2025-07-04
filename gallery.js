@@ -11,8 +11,13 @@ let galleryHTML = "";
 let sliderHTML = "";
 
 vishkaImg.forEach((v) => {
-    galleryHTML += `<img id="gImg" src="${v.img}" alt="${v.alt}"  title"${v.name} loading="lazy"/>`;
-    sliderHTML += `<img src="${v.img}" alt="${v.alt}"  title"${v.name}" />`;
+    galleryHTML += `
+    <div class="img-wrapper">
+        <img id="gImg" src="${v.img}" alt="${v.alt}"  title="${v.name}" loading="lazy"/>
+        <span class="fullsize">&#10530;</span>
+    </div>
+    `;
+    sliderHTML += `<img src="${v.img}" alt="${v.alt}"  title="${v.name}" />`;
 });
 
 if (gallery) gallery.innerHTML = galleryHTML;
@@ -48,6 +53,15 @@ function resetSlider() {
 }
 
 document.querySelectorAll("#gImg").forEach((img, i) => {
+    img.addEventListener("click", () => {
+        index = i;
+        updateSlider();
+        resetSlider();
+        document.querySelector(".slider").showModal();
+    });
+});
+
+document.querySelectorAll(".fullsize").forEach((img, i) => {
     img.addEventListener("click", () => {
         index = i;
         updateSlider();

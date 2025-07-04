@@ -100,6 +100,13 @@ body {
     gap: 1.5rem;
 }
 
+.img-wrapper {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
 .gallery img {
     width: 100%;
     height: 180px;
@@ -114,9 +121,23 @@ body {
     transform: scale(1.03);
 }
 
+.fullsize {
+    display: none;
+    position: absolute;
+    font-size: 2rem;
+    font-weight: 900;
+    border-radius: 20%;
+    border: none;
+    color: #ffffff;
+    margin: 4px 14px;
+}
+
 @media (max-width: 600px) {
     .container {
         max-width: 100%;
         padding: 0 1rem;
+    }
+    .fullsize {
+        display: block;
     }
 }
