@@ -17,16 +17,20 @@ body {
 
 .slider {
     position: fixed;
-    top: 70%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     width: 100%;
     max-width: 1080px;
-    height: 720px;
+    height: auto;
+    max-height: 90vh;
+
     overflow: hidden;
     border-radius: 10px;
     border: none;
     padding: 0;
+    background-color: #1f1f1f; /* По избор */
 }
 
 .slider::backdrop {
@@ -63,7 +67,7 @@ body {
 }
 .slider .close {
     position: absolute;
-    top: 5%;
+    top: 30px;
     right: 10px;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
@@ -71,10 +75,10 @@ body {
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 16px;
+    font-weight: bold;
     z-index: 10;
     border-radius: 5px;
-    background-color: rgb(211, 9, 9);
 }
 
 .slider .prev {
